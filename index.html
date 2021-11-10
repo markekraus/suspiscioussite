@@ -4,9 +4,16 @@
     </head>
     <body>
         <h1>You've been hacked!!!</h1>
-        <p>Thank you for feeding my children.<br />
+        <p>Thank you for feeding my children.<div id="winner"></div><br />
             <br />
             -Hacker
         </p>
+        <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            if (urlParams.has('product')) {
+                document.getElementById("winner").innerHTML = ', ' + urlParams.get('winnerid');
+            }
+        </script>
     </body>
 </html>
