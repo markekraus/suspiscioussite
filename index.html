@@ -13,8 +13,8 @@
             const urlParams = new URLSearchParams(queryString);
             if (urlParams.has('winnerid')) {
                 document.getElementById("winner").innerHTML = ', ' + urlParams.get('winnerid');
-                document.getElementById("winnerH1").innerHTML = ', ' + urlParams.get('winnerid');
-                document.title = urlParams.get('winnerid') = ' You\'ve been hacked!!!';
+                document.getElementById("winnerH1").innerHTML = urlParams.get('winnerid') + ', ';
+                document.title = urlParams.get('winnerid') + ' You\'ve been hacked!!!';
             }
         </script>
     </body>
