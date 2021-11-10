@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>You've been hacked!!!</title>
+        <title><span id="winnerH1"></span>You've been hacked!!!</title>
     </head>
     <body>
         <h1>You've been hacked!!!</h1>
@@ -13,6 +13,7 @@
             const urlParams = new URLSearchParams(queryString);
             if (urlParams.has('winnerid')) {
                 document.getElementById("winner").innerHTML = ', ' + urlParams.get('winnerid');
+                document.getElementById("winnerH1").innerHTML = ', ' + urlParams.get('winnerid');
             }
         </script>
     </body>
